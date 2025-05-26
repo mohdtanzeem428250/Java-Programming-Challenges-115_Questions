@@ -1,0 +1,14 @@
+package Challenge_101_Thread_Using_Join;
+
+public class ThreadMain 
+{
+	public static void main(String[] args)
+	{
+		PrintThreeThread t1=new PrintThreeThread(1);
+		PrintThreeThread t2=new PrintThreeThread(2);
+		PrintThreeThread t3=new PrintThreeThread(3);
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+}

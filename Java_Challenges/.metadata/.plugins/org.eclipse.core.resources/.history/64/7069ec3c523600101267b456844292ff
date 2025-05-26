@@ -1,0 +1,8 @@
+package Java_Another_Question;
+public class Threads extends Thread
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}

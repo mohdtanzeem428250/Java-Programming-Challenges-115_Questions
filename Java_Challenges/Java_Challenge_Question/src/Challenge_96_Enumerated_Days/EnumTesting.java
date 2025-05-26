@@ -1,0 +1,21 @@
+package Challenge_96_Enumerated_Days;
+
+public class EnumTesting 
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Printing All The Days Of The Week");
+		System.out.println(Day.SUNDAY);
+		System.out.println(Day.MONDAY);
+		System.out.println(Day.TUESDAY);
+		System.out.println(Day.WEDNESDAY);
+		System.out.println(Day.THURADAY);
+		System.out.println(Day.FRIDAY);
+		System.out.println(Day.SATURDAY);
+		
+		for(Day days:Day.values())
+		{
+			System.out.println(days);
+		}
+	}
+}

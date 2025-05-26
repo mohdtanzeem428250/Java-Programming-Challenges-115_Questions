@@ -1,0 +1,10 @@
+package Challenge_100_Thread_State;
+
+public class ThreadTesting
+{
+	public static void main(String[] args)
+	{
+		ThreadStates t1=new ThreadStates();
+		System.out.printf("From Inside Run %s ",t1.getState());
+	}
+}

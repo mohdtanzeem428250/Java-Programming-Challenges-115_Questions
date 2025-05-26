@@ -1,0 +1,14 @@
+package Challenge_109_Filter_Odd_Number;
+
+import java.util.List;
+
+public class PrintFilterOddNumber 
+{
+	public static void main(String[] args)
+	{
+		List<Integer> numbers=List.of(2,3,4,1,8,6,65,9,78);
+		numbers.stream()
+			   .filter(odd->odd%2!=0)
+			   .forEach(print->System.out.print(print+", "));
+	}
+}

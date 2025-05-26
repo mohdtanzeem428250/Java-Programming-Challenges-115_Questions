@@ -1,0 +1,15 @@
+package Java_Another_Question;
+class Thread1
+{
+	for(int i=1;i<=100;i++)
+	{
+		
+	}
+}
+public class Threads 
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}

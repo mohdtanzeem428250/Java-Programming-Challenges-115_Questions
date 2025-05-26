@@ -1,0 +1,5 @@
+package Challenge_97_Enum_WeekDay_WeekEnd;
+
+public enum Days {
+
+}

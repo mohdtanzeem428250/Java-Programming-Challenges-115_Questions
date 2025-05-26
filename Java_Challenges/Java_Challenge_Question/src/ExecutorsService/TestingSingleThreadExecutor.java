@@ -1,0 +1,17 @@
+package ExecutorsService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+public class TestingSingleThreadExecutor 
+{
+	public static void main(String[] args)
+	{
+		ExecutorService service=Executors.newSingleThreadExecutor();
+		PrintTasksExecutor task1=new PrintTasksExecutor('*');
+		PrintTasksExecutor task2=new PrintTasksExecutor('@');
+		PrintTasksExecutor task3=new PrintTasksExecutor('$');
+		service.submit(task1);
+		service.submit(task2);
+		service.submit(task3);
+		service.shutdown();
+	}
+}

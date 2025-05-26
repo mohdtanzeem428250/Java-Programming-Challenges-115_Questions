@@ -1,0 +1,20 @@
+package Java_76_Challenges_Question;
+import java.util.List;
+//import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+public class Challenge_90_String_Sort_Descending_Using_Comparator
+{
+	public static void main(String[] args)
+	{
+		List<String> list=Arrays.asList("Tanzeem","Rahul","Areeb","Isha","Mahak","Sohail","Khushi");
+		stringDescendingOrder(list);
+	}
+	public static void stringDescendingOrder(List<String> strItems)
+	{
+		System.out.print(strItems);
+		Collections.sort(strItems);
+		System.out.println());
+		System.out.print(strItems);
+	}
+}

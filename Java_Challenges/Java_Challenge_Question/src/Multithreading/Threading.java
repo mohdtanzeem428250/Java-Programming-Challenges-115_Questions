@@ -1,0 +1,17 @@
+package Multithreading;
+
+public class Threading
+{
+	public static void main(String[] args)
+	{
+		long startTime=System.currentTimeMillis();
+		FirstThread t1=new FirstThread();
+		SecondThread t2=new SecondThread();
+		ThirdThread t3=new ThirdThread();
+		t1.start();
+		t2.start();
+		t3.start();
+		long endTime=System.currentTimeMillis();
+		System.out.printf("Total Time Taken : %d",endTime-startTime);
+	}
+}

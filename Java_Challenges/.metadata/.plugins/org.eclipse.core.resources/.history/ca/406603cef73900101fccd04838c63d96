@@ -1,0 +1,20 @@
+package Challenge_110_Functional_Interface;
+
+public class TestingFunctionalInterface 
+{
+	public static void main(String[] args)
+	{
+		Candidate candidate=number->
+		{
+			for(int i=2;i<number;i++)
+			{
+				if(number%i==0)
+				{
+					return false;
+				}
+			}
+			return true;
+		};
+		System.out.println(candidate.isCandidate(5));
+	}
+}

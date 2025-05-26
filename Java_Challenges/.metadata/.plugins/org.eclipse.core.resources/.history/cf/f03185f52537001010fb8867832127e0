@@ -1,0 +1,18 @@
+package Challenge_100_Thread_State;
+
+public class ThreadStates extends Thread
+{
+	@Override
+	public void run()
+	{
+		try
+		{
+			Thread.sleep(4000);
+			System.out.printf("From Inside Run %s ",Thread.currentThread().getState());
+		}
+		catch(InterruptedException exception)
+		{
+			throw new RuntimeException(exception);
+		}
+	}
+}

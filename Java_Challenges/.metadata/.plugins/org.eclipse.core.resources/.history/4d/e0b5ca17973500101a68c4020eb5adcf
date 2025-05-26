@@ -1,0 +1,19 @@
+package Java_76_Challenges_Question;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Scanner;
+public class Challenge_95_String_Unique_Character 
+{
+	public static void main(String[] args)
+	{
+		Set<Character> unique=new HashSet<>();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Please Enter Your String : ");
+		String userString=scanner.next();
+		for(char i:userString.toCharArray())
+		{
+			unique.add(i);
+		}
+		System.out.print(unique.size());
+	}
+}

@@ -1,0 +1,19 @@
+package ExecutorsService;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class TestingMultipleTasksExecutor 
+{
+	public static void main(String[] args)
+	{
+		ExecutorService service=Executors.newFixedThreadPool(2);
+		PrintTasksExecutor task1=new PrintTasksExecutor('*');
+		PrintTasksExecutor task2=new PrintTasksExecutor('@');
+		PrintTasksExecutor task3=new PrintTasksExecutor('$');
+		service.submit(task1);
+		service.submit(task2);
+		service.submit(task3);
+		service.shutdown();
+	}
+}

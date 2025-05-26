@@ -1,0 +1,27 @@
+package Challenge_105_Callable;
+
+import java.util.concurrent.Callable;
+
+public class FactorialCalculater implements Callable<Integer>
+{
+	private final int factorialNumber;
+	public FactorialCalculater(int factorialNumber)
+	{
+		this.factorialNumber=factorialNumber;
+	}
+	@Override
+	public Integer call() throws Exception
+	{
+		Thread.sleep(2000);
+		if(factorialNumber<=1)
+		{
+			return 1;
+		}
+		int result=1;
+		for(int i=1;i<factorialNumber;i++)
+		{
+			result*=i;
+		}
+		return 0;
+	}
+}

@@ -1,0 +1,22 @@
+package Runnable_Interface;
+
+public class TestingRunnable 
+{
+	public static void main(String[] args)
+	{
+		long startTime=System.currentTimeMillis();
+		PrintTasks p1=new PrintTasks('@');
+		PrintTasks p2=new PrintTasks('#');
+		PrintTasks p3=new PrintTasks('%');
+		
+		Thread t1=new Thread(p1);
+		Thread t2=new Thread(p2);
+		Thread t3=new Thread(p3);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		long endTime=System.currentTimeMillis();
+		System.out.printf("%s Total Time Taken : %d ",Thread.currentThread().getName(),(startTime-endTime));
+	}
+}

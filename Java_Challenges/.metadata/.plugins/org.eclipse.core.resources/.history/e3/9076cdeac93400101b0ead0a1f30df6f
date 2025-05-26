@@ -1,0 +1,32 @@
+package Challenge_88_FileNotFoundExceptions;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+public class FileNotFound 
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter The File Name");
+		String filename=scanner.next();
+		try(FileReader reader=new FileReader(filename))
+		{
+			int read=0;
+			do
+			{
+				read=reader.read();
+				System.out.print((char)read);
+			}
+			while(read!=-1);
+		}
+		catch(FileNotFoundException exception)
+		{
+			System.out.println("File Does Not Exists "+exception.getMessage());
+		}
+		catch(IOException exception)
+		{
+			System.out.println("File Does Not Exists "+exception.getMessage());
+		}
+	}
+}

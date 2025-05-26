@@ -1,0 +1,28 @@
+package Challenge_111_Factorial_Using_Functional_Programming;
+
+import java.util.stream.IntStream;
+
+public class TestingFactorial 
+{
+	public static void main(String[] args)
+	{
+		int number=9;
+		System.out.println("Factorial Using Two Ways");
+		System.out.println(factorialNumber(number));
+		IntStream.rangeClosed(2,number)
+		.forEach(System.out::println);
+	}
+	public static long factorialNumber(int number)
+	{
+		if(number==0||number==1)
+		{
+			return 1;
+		}
+		long factorial=1;
+		for(int i=2;i<=number;i++)
+		{
+			factorial*=i;
+		}
+		return factorial;
+	}
+}

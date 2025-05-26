@@ -1,0 +1,31 @@
+package Java_Another_Question;
+import java.io.FileWriter;
+import java.io.IOException;
+public class FileWrite 
+{
+	public static void main(String[] args)
+	{
+		String filename="example.txt";
+		FileWriter writer=null;
+		try
+		{
+			writer=new FileWriter(filename);
+			writer.write("This is The Best Java Challenges Question");
+			writer.flush();
+			System.out.println("File Written Successfully");
+		}
+		catch(IOException exception)
+		{
+			System.out.println("Exception Occurred "+exception.getMessage());
+		}
+		finally
+		{
+			try {
+				writer.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

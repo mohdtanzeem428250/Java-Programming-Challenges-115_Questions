@@ -1,0 +1,5 @@
+package Challenge_88_FileNotFoundExceptions;
+
+public class FileNotFound {
+
+}

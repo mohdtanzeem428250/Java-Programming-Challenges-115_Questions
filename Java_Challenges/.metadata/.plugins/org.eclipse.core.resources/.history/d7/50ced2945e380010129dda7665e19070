@@ -1,0 +1,10 @@
+package Challenge_103_Single_Thread_Executors;
+
+public class SingleThreadService {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

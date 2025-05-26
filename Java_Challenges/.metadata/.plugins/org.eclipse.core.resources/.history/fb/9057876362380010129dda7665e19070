@@ -1,0 +1,28 @@
+package Challenge_104_Multiple_Thread_Executors;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ExecutorService;
+public class MultiThreadExecutors 
+{
+	public static void main(String[] args) throws InterruptedException
+	{
+		try(ExecutorService service=Executors.newFixedThreadPool(3))
+		{
+			for(int i=1;i<=10;i++)
+			{
+				SleepTasks task=new SleepTasks();
+				service.submit(task);
+			}
+			if(!service.awaitTermination(10,TimeUnit.SECONDS))
+			{
+				System.out.println("Emergency Shutdown");
+				service.shutdownNow();
+			}
+		}
+		catch(InterruptedException exception)
+		{
+			throw new RuntimeException(exception);
+		}
+	}
+}

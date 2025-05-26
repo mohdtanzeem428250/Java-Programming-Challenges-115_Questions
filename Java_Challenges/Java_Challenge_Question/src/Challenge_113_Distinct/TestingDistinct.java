@@ -1,0 +1,17 @@
+package Challenge_113_Distinct;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TestingDistinct 
+{
+	public static void main(String[] args)
+	{
+		List<Integer> list=List.of(2,3,4,2,3,5,6,7,6,8,9,8,7,6);
+		List<Integer> newDistinctList=list.stream()
+			.distinct()
+			.collect(Collectors.toList());
+		System.out.println(list);
+		System.out.println(newDistinctList);
+	}
+}

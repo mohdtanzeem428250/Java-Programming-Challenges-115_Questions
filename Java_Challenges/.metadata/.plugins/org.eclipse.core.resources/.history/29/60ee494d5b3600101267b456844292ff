@@ -1,0 +1,20 @@
+package Runnable_Interface;
+
+public class PrintTasks implements Runnable
+{
+	@Override
+	public void run() 
+	{
+		for(int i=1;i<=100;i++)
+		{
+			System.out.printf("%d%s ",i,targetChar);
+		}
+		System.out.print("Task Completed");
+	}
+	private final char targetChar;
+	
+	public PrintTasks(char targetChar)
+	{
+		this.targetChar=targetChar;
+	}
+}

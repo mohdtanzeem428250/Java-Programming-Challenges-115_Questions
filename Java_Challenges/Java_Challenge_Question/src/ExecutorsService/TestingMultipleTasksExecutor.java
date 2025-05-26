@@ -1,0 +1,26 @@
+package ExecutorsService;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+public class TestingMultipleTasksExecutor
+{
+	public static void main(String[] args) throws InterruptedException
+	{
+		ExecutorService service=Executors.newFixedThreadPool(4);
+		for(int i=1;i<=10;i++)
+		{
+			PrintTasksExecutor task1=new PrintTasksExecutor((char)i);
+			service.submit(task1);
+		}
+		System.out.println("******************************\n");
+		service.shutdown();
+		
+		if(!service.awaitTermination(10,TimeUnit.SECONDS))
+		{
+			service.shutdownNow();
+			System.out.println("\n******************************");
+		}
+	}
+}

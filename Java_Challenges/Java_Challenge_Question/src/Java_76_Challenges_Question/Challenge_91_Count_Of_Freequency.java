@@ -1,0 +1,13 @@
+package Java_76_Challenges_Question;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+public class Challenge_91_Count_Of_Freequency 
+{
+	public static void main(String[] args)
+	{
+		List<Integer> list=Arrays.asList(2,3,4,5,2,6,7,8,2);
+		System.out.println(Collections.frequency(list,3));
+	}
+}
